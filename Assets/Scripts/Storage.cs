@@ -30,8 +30,6 @@ public class Storage : ItemConteinerBase
     {
         if (_tempItem < 0) 
         {
-            Debug.Log("TempItem");
-
             if (_storageEmptyIsMessage)
                 MessageController.Instance.SummonMessage(_storageEmptyMessageText);
 
