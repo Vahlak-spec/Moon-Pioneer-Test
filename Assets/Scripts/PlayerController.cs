@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
     {
         while (true)
         {
-            transform.position = transform.position + (_moweDirection * _speed * Time.fixedDeltaTime);
+            transform.position = transform.position + (_moweDirection * _speed * Time.deltaTime);
             if (_moweDirection != Vector3.zero)
                 transform.rotation = Quaternion.LookRotation(_moweDirection);
-            yield return new WaitForFixedUpdate();
+            yield return new WaitForEndOfFrame();
         }
     }
 }
